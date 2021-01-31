@@ -131,10 +131,21 @@
         ),
     ])
 
+    const node3 = h('div', { class: 'container' }, [
+      h('h1', null, 'Hello'),
+      h('p', null, [
+        h('a', {href: 'https://https://github.com/kolife01-sandbox'}, 'kolife-sandbox')
+      ])
+    ])
+
     // Patch the new node to the old node
     setTimeout(() => {
         patch(node1, node2)
-    }, 3000)
+    }, 2000)
+
+    setTimeout(() => {
+        patch(node2, node3)
+    }, 5000)
 </script>
 </body>
 </html>
